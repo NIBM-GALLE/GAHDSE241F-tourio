@@ -106,8 +106,8 @@ class HotelSignFormActivity : AppCompatActivity() {
                 .add(hotelData) // generates a document ID automatically
                 .addOnSuccessListener { documentReference ->
                     Toast.makeText(this, "Welcome, $hotelName!", Toast.LENGTH_SHORT).show()
-                    //val intent = Intent(this, HotelDashBoardActivity::class.java)
-                    //intent.putExtra("userId", userId)
+                    val intent = Intent(this, HotelDashBoardActivity::class.java)
+                    intent.putExtra("userId", userId)
                     startActivity(intent)
                     finish()
                 }

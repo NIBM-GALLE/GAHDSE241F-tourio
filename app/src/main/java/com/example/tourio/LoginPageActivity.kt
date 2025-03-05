@@ -58,16 +58,19 @@ class LoginPageActivity : AppCompatActivity() {
                                     when (userRole) {
                                         "Traveler" -> {
                                             Toast.makeText(this, "Welcome, $userName!", Toast.LENGTH_SHORT).show()
+                                            val intent = Intent(this, HomeNavBarActivity::class.java)
                                             startActivity(intent)
                                             finish()
                                         }
                                         "Guide" -> {
                                             Toast.makeText(this, "Welcome, $userName!", Toast.LENGTH_SHORT).show()
+                                            val intent = Intent(this, HomePageActivity::class.java)
                                             startActivity(intent)
                                             finish()
                                         }
                                         "Hotel" -> {
                                             Toast.makeText(this, "Welcome, $userName!", Toast.LENGTH_SHORT).show()
+                                            val intent = Intent(this, HotelDashBoardActivity::class.java)
                                             intent.putExtra("userId", currentUserId)
                                             startActivity(intent)
                                             finish()

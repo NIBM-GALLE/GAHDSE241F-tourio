@@ -173,7 +173,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
                                 android:layout_alignParentTop="true"
-                                android:src="@drawable/ic_add"
+                                android:src="@drawable/img_ninearch_1"
                                 android:scaleType="centerCrop"
                                 android:clipToOutline="true"
                                 tools:ignore="DuplicateIds" />
