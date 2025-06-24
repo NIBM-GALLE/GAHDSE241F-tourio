@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import './loginpage.css';
-import { ReactComponent as WarrantyIcon } from '../../assets/icons/icon_warranty.svg';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import axios from 'axios';
-import { auth } from '../../firebaseConfig';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ReactComponent as WarrantyIcon } from '../../assets/icons/icon_warranty.svg';
+import { auth } from '../../firebaseConfig';
+import './loginpage.css';
 
 
 const LoginPage = () => {
@@ -118,7 +118,7 @@ const LoginPage = () => {
               </div>
 
               <div className="form-footer">
-                <p>Don't have an account? <a href="/signuppage">Sign up</a></p>
+                <p>Don't have an account? <a href="/signup">Sign up</a></p>
               </div>
             </form>
           </div>

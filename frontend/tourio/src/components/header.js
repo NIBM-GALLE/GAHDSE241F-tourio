@@ -1,8 +1,7 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import './header.css';
-import logo from "../assets/images/logoimage.png";
+import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as LogoIcon } from '../assets/icons/profileicon.svg';
+import logo from "../assets/images/logoimage.png";
+import './header.css';
 
 const Header = ({ activeTab, setActiveTab }) => {
   const navigate = useNavigate();
@@ -35,10 +34,10 @@ const Header = ({ activeTab, setActiveTab }) => {
           Requests
         </span>
       </nav>
-      <div className="profile">
+      <Link to="/userprofile" className="profile">
         <LogoIcon width={35} height={35} className="profile-icon" />
         <span className="profile-name">Profile</span>
-      </div>
+      </Link>
     </header>
   );
 };
