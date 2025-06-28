@@ -13,6 +13,7 @@ import RequestsPage from "./pages/requestspage/requestspage";
 import SignupPage from "./pages/singuppage/singuppage";
 import TourCreationPage from "./pages/touraddpage/touraddpage";
 import TourPage from "./pages/tourpage/tourpage";
+import TourRequestsPage from "./pages/tourrequestspage/tourrequestspage";
 
 const AppRoutes = () => {
   return (
@@ -33,6 +34,7 @@ const AppRoutes = () => {
         <Route path="/feedbackpage" element={<FeedbackPage />} />
         <Route path="/addtourrequest" element={<AddTourRequest />} />
         <Route path="/notifications" element={<NotificationPage />} />
+        <Route path="/tourrequests" element={<TourRequestsPage />} />
       </Routes>
     </Router>
   );

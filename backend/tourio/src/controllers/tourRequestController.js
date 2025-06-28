@@ -10,7 +10,10 @@ const getTourRequests = async (req, res) => {
       tourRequests.push({
         title: data.tourTitle,
         destination1: data.destination1,
+        destination2: data.destination2,
         destination3: data.destination3,
+        destination4: data.destination4,
+        destination5: data.destination5,
         budget: data.acceptedBudget,
         tourReqId: data.tourReqId,
         userId: data.userId,
