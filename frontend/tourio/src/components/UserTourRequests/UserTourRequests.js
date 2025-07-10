@@ -29,10 +29,34 @@ const UserTourRequests = () => {
     }));
   };
 
-  const handleSendProposal = (tourReqId, userId) => {
+  const handleSendProposal = async (tourReqId) => {
     const proposalData = proposals[tourReqId];
-    console.log('Send Proposal:', { tourReqId, userId, ...proposalData });
-    
+    const tourReq = tourRequests.find(req => req.tourReqId === tourReqId);
+
+    const destinationFields = {};
+    for (let i = 1; i <= 5; i++) {
+      if (tourReq[`destination${i}`]) {
+        destinationFields[`destination_${i}`] = tourReq[`destination${i}`];
+      }
+    }
+
+    try {
+      await axios.post(
+        'http://localhost:5000/api/createtourproposal',
+        {
+          tourReqId,
+          proposalText: proposalData.text,
+          proposedBudget: proposalData.budget,
+          ...destinationFields,
+        },
+        // { withCredentials: true }
+      );
+
+      alert('Proposal sent successfully!');
+    } catch (error) {
+      console.error('Failed to send proposal:', error);
+      alert('Failed to send proposal.');
+    }
   };
 
   return (

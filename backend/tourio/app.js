@@ -11,6 +11,7 @@ const addTourRequestRoutes = require('./src/routes/addTourRequestRoutes');
 const dialogflowRoutes = require('./src/routes/dialogflowRoutes');
 const tourFeedbackRoutes = require('./src/routes/tourFeedbackRoutes');
 const getTourFeedbackRoutes = require('./src/routes/getTourFeedbackRoutes')
+const tourProposalRoutes = require('./src/routes/tourProposalRoutes');
 
 const app = express();
 
@@ -33,7 +34,6 @@ app.use('/api/addtourrequest', addTourRequestRoutes);
 app.use('/api/dialogflow', dialogflowRoutes);
 app.use('/api/tourfeedback', tourFeedbackRoutes);
 app.use('/api/gettourfeedbacks', getTourFeedbackRoutes);
-
-
+app.use('/api/createtourproposal', tourProposalRoutes);
 
 module.exports = app;
