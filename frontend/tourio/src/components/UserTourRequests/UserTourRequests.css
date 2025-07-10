@@ -1,0 +1,66 @@
+.tour-requests-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px;
+  background: #f9f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  width: 320px;
+  padding: 24px;
+  transition: 0.3s;
+}
+
+.tour-card:hover {
+  transform: scale(1.02);
+}
+
+.tour-card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.tour-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.tour-card p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.tour-card textarea,
+.tour-card input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+}
+
+.tour-card button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  background: #0b427c;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tour-card button:hover {
+  background: #0b2446;
+}
